@@ -7,7 +7,7 @@ double calculatePrice(double baseprice, double specialprice, double extraprice, 
     
     if (extras >= 3) 
         addon_discount = 10;
-    else if (extras >= 5)
+    else if (extras >= 5) // this will never be reached because it already catches it in (extras >= 3)
         addon_discount = 15;
     else 
         addon_discount = 0;
