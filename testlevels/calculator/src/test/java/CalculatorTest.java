@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -7,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class CalculatorTest {
 
     @Test
+    @DisplayName("multiply +")
     void add_TwoPlusTwo_equalFour() {
         Calculator calculator = new Calculator();
         assertEquals(4, calculator.add(2, 2));
