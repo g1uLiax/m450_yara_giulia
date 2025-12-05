@@ -100,7 +100,7 @@ public class Bank
 
 	/**
 	 * Gibt den Kontostand des Kontos mit der gegebenen
-	 * Kontonummer zur�ck.
+	 * Kontonummer zurck.
 	 *
 	 * <p>
 	 * Falls kein Konto mit der gesuchten Kontonummer
