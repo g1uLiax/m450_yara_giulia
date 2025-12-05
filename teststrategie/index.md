@@ -34,3 +34,9 @@ the pdf 2 from this link:
 https://gitlab.com/ch-tbz-it/Stud/m450/m450/-/blob/main/Unterlagen/unit-testing/README.md
 
 # Übung 3
+![alt text](bank-klassendiagram.png)
+
+Theres an abstract class Account and different types of Accounts which extend this class. The class Account is used very similar to how an interface or a parentclass would be used, except that it implements the functions like in a parentclass but it cant be instantiated on its own.
+The Bank keeps a tree map of Accounts in the Bank. There are different methods to create each of the different types of accounts.
+
+There is a method to book/withdraw from account which is linked to the Account. The BankUtils class is there to format different results
