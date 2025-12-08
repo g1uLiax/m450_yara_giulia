@@ -17,6 +17,7 @@ Non functional:
 ## Aufgabe 2
 ### Nennen Sie ein Beispiel eines SW-Fehlers und eines SW-Mangels.
 Fehler: Falsche/Fehlende Daten von API Endpoint erhalten.
+<br>
 Mangel: Erhaltene Daten werden im falschen Format angezeigt. Die Anforderung des korrekten Formats ist nicht erfüllt.
 
 Beispiel:
