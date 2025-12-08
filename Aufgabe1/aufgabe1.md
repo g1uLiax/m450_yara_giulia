@@ -1,4 +1,4 @@
-## Übung 1
+## Aufgabe 1
 
 ### Welche Formen von Tests kennen Sie aus der Informatik?
 Functional:
@@ -14,16 +14,17 @@ Non functional:
 - Usability
 - Stress test
 
+## Aufgabe 2
 ### Nennen Sie ein Beispiel eines SW-Fehlers und eines SW-Mangels.
-Fehler: Falsche Daten von API endpoint erhalten. 
-Mangel: Erhaltene Daten werden im falschen Format angezeigt.
+Fehler: Falsche/Fehlende Daten von API Endpoint erhalten.
+Mangel: Erhaltene Daten werden im falschen Format angezeigt. Die Anforderung des korrekten Formats ist nicht erfüllt.
 
 Beispiel:
 Es werden falsche Aktienpreise angezeigt/nicht geupdated. Kunden investieren viel Geld durch eine Täuschung.
 
-### Eine Software gliedert sich in der Regel in eine Reihe von Teilsystemen, die wiederum aus einer Vielzahl elementarer Komponenten besteht. Wir haben im V-Modell gesehen, dass es verschiedene Teststufen gibt. Wir wollen in diesem Zusammenhang nun ein Beispiel der untersten Stufe anschauen.
+## Aufgabe 3
+The tests are found [here](main.cpp)
 
-Untere Teststufen der Pyramide sind Componenet testing und Unit testing. 
+![alt text](image3.png)
 
-### Aufgabe 3
-![alt text](image.png)
+![alt text](image2.png)
