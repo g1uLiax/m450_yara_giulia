@@ -111,7 +111,25 @@ public class BankTests {
      */
     @Test
     public void testTop5() {
-        fail("toDo");
+        Bank bank = new Bank();
+        bank.createSavingsAccount();
+        bank.createSavingsAccount();
+        bank.createSavingsAccount();
+        bank.createSavingsAccount();
+        bank.createSavingsAccount();
+        bank.createSavingsAccount();
+        bank.deposit("S-1000", 12122025, 100000);
+        bank.deposit("S-1001", 12122025, 50000);
+        bank.deposit("S-1002", 12122025, 34);
+        bank.deposit("S-1003", 12122025, 4500);
+        bank.deposit("S-1004", 12122025, 2700000);
+        bank.deposit("S-1005", 12122025, 4500);
+        bank.printTop5();
+        assertEquals("S-1004: 2700000\r\n" +
+                "S-1000: 100000\r\n" +
+                "S-1001: 50000\r\n" +
+                "S-1003: 4500\r\n" +
+                "S-1005: 4500", outputStreamCaptor.toString().trim());
     }
 
     /**
@@ -119,7 +137,25 @@ public class BankTests {
      */
     @Test
     public void testBottom5() {
-        fail("toDo");
+        Bank bank = new Bank();
+        bank.createSavingsAccount();
+        bank.createSavingsAccount();
+        bank.createSavingsAccount();
+        bank.createSavingsAccount();
+        bank.createSalaryAccount(-1000);
+        bank.createSavingsAccount();
+        bank.deposit("S-1000", 12122025, 10000);
+        bank.deposit("S-1001", 12122025, 2300);
+        bank.deposit("S-1002", 12122025, 870);
+        bank.deposit("S-1003", 12122025, 4000);
+        bank.deposit("P-1004", 12122025, 57000);
+        bank.deposit("S-1005", 12122025, 8900);
+        bank.printBottom5();
+        assertEquals("S-1002: 870\r\n" +
+                "S-1001: 2300\r\n" +
+                "S-1003: 4000\r\n" +
+                "S-1005: 8900\r\n" +
+                "S-1000: 10000", outputStreamCaptor.toString().trim());
     }
 
 }

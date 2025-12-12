@@ -67,7 +67,7 @@ public class Bank
 	 */
 	public String createSalaryAccount(long creditLimit)
 	{
-		if (creditLimit > 0) // ung�ltiger Parameter?
+		if (creditLimit > 0) // ungültiger Parameter?
 		{
 			return null;
 		}
@@ -80,7 +80,7 @@ public class Bank
 	
         }
 	/**
-	 * Gibt den Kontostand der Bank zur�ck.
+	 * Gibt den Kontostand der Bank zurück.
 	 *
 	 * @return long der Kontostand der Bank
 	 */
@@ -104,7 +104,7 @@ public class Bank
 	 *
 	 * <p>
 	 * Falls kein Konto mit der gesuchten Kontonummer
-	 * existiert, gibt diese Methode 0 (zero) zur�ck.
+	 * existiert, gibt diese Methode 0 (zero) zurück.
 	 * </p>
 	 *
 	 * @param id die Kontonummer
@@ -125,7 +125,7 @@ public class Bank
 	 * der gegebenen Kontonummer ein.
 	 *
 	 * <p>
-	 * Diese Methode kann <code>false</code> zur�ckgeben,
+	 * Diese Methode kann <code>false</code> zurückgeben,
 	 * falls das Konto nicht existiert, oder falls die
 	 * Einzahlung auf dem Konto nicht funktioniert.
 	 * </p>
@@ -144,7 +144,7 @@ public class Bank
 		if (a == null)
 			return false; // nicht gefunden
 
-	    // Einzahlen und Erfolg zur�ckgeben
+	    // Einzahlen und Erfolg zurückgeben
 		return a.deposit(date, amount);
 	}
 
@@ -153,7 +153,7 @@ public class Bank
 	 * der gegebenen Kontonummer ab.
 	 *
 	 * <p>
-	 * Diese Methode kann <code>false</code> zur�ckgeben,
+	 * Diese Methode kann <code>false</code> zurückgeben,
 	 * falls das Konto nicht existiert, oder falls das
 	 * Abheben vom Konto nicht funktioniert.
 	 * </p>
@@ -172,7 +172,7 @@ public class Bank
 		if (a == null)
 			return false; // nicht gefunden
 
-		// Abheben und Erfolg zur�ckgeben
+		// Abheben und Erfolg zurückgeben
 		return a.withdraw(date, amount);
 	}
 
@@ -195,7 +195,7 @@ public class Bank
 
 	/**
 	 * Druckt den Kontoauszug des Kontos mit der gegebenen
-	 * Kontonummer f�r den gegebenen Monat.
+	 * Kontonummer für den gegebenen Monat.
 	 *
 	 * @param id die Kontonummer des zu druckenden Kontos
 	 * @param year das Jahr
@@ -213,7 +213,7 @@ public class Bank
 	}
 
 	/**
-	 * Druckt die f�nf Konten mit dem h�chsten Saldo.
+	 * Druckt die fünf Konten mit dem höchsten Saldo.
 	 */
 	public void printTop5()
 	{
@@ -230,7 +230,7 @@ public class Bank
 	}
 
 	/**
-	 * Druckt die f�nf Konten mit dem h�chsten Saldo.
+	 * Druckt die fünf Konten mit dem höchsten Saldo.
 	 */
 	public void printBottom5()
 	{
