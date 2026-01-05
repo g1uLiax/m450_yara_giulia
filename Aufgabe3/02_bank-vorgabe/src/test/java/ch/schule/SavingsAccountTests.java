@@ -1,5 +1,6 @@
-package ch.schule.bank.junit5;
+package ch.schule;
 
+import ch.schule.Account;
 import ch.schule.SavingsAccount;
 
 
@@ -25,9 +26,10 @@ import static org.junit.jupiter.api.Assertions.*;
 public class SavingsAccountTests
 {
 	@Test
-	public void test()
-	{
-		fail("toDo");
+	public void testWithdrawNonNegative() {
+		Account account = new SavingsAccount("1");
+		account.withdraw(12122025, 100);
+		assertEquals(0, account.getBalance());
 	}
 }
 

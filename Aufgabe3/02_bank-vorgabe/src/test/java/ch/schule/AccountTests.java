@@ -1,4 +1,4 @@
-package ch.schule.bank.junit5;
+package ch.schule;
 
 import ch.schule.*;
 import org.junit.jupiter.api.AfterEach;
@@ -49,6 +49,8 @@ public class AccountTests {
     public void testDeposit() {
         SavingsAccount account = new SavingsAccount("1");
         account.deposit(5122025, 100);
+        account.deposit(5122025, -10);
+        account.deposit(2025-11-14, 20);
         assertEquals(100, account.getBalance());
     }
 
@@ -59,6 +61,8 @@ public class AccountTests {
     public void testWithdraw() {
         SalaryAccount account = new SalaryAccount("1", -1000);
         account.withdraw(5122025, 100);
+        account.withdraw(5122025, -100);
+        account.withdraw(2025-11-14, 100);
         assertEquals(-100, account.getBalance());
     }
 
@@ -75,8 +79,11 @@ public class AccountTests {
      */
     @Test
     public void testCanTransact() {
-        SavingsAccount account = new SavingsAccount(" 1");
-        assertEquals(true, account.canTransact(5122025));
+        SavingsAccount savingsAccount = new SavingsAccount("1");
+        savingsAccount.deposit(20251114, 50);
+        boolean result = savingsAccount.withdraw(20251114, 40);
+        assertTrue(result);
+        assertEquals(10, savingsAccount.getBalance());
     }
 
     /**

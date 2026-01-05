@@ -1,8 +1,6 @@
-package ch.schule.bank.junit5;
+package ch.schule;
 
-import ch.schule.Account;
-import ch.schule.Bank;
-import ch.schule.SavingsAccount;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -37,16 +35,16 @@ public class BankTests {
      */
     @Test
     public void testCreate() {
-        Bank test = new Bank();
-        /*
-        String pysaId = test.createPromoYouthSavingsAccount();
-        String salaryId = test.createSalaryAccount(0);
-        String savingsId = test.createSavingsAccount();
+        Bank bank = new Bank();
+
+        String pysaId = bank.createPromoYouthSavingsAccount();
+        String salaryId = bank.createSalaryAccount(0);
+        String savingsId = bank.createSavingsAccount();
 
         assertEquals("Y-1000", pysaId);
         assertEquals("P-1001", salaryId);
-        assertEquals("S-1002", savingsId);*/
-
+        assertEquals("S-1002", savingsId);
+        assertNotNull(bank);
     }
     /**
      * Testet das Einzahlen auf ein Konto.
@@ -66,6 +64,7 @@ public class BankTests {
         Bank bank = new Bank();
         bank.createSalaryAccount(-1000);
         bank.withdraw("P-1000", 12122025, 100);
+        bank.withdraw("1", 12122025, 100);
         assertEquals(-100, bank.getBalance("P-1000"));
     }
 

@@ -22,7 +22,7 @@ public class PromoYouthSavingsAccount extends SavingsAccount
 
 	/**
 	 * Zahlt den gegebenen Betrag (plus den von der
-	 * Bank gew�hrten Bonus) aufs Konto ein.
+	 * Bank gewährten Bonus) aufs Konto ein.
 	 *
 	 * @param date das Transaktionsdatum
 	 * @param amount der einzuzahlende Betrag

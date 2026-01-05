@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package ch.schule.bank.junit5;
+package ch.schule;
 
 
 import ch.schule.Bank;

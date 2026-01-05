@@ -1,5 +1,6 @@
-package ch.schule.bank.junit5;
+package ch.schule;
 
+import ch.schule.Account;
 import ch.schule.PromoYouthSavingsAccount;
 import org.junit.jupiter.api.Test;
 
@@ -18,8 +19,9 @@ public class PromoYouthSavingsAccountTests
 	 * Der Test.
 	 */
 	@Test
-	public void test()
-	{
-		fail("toDo");
+	public void testDeposit() {
+		Account promo = new PromoYouthSavingsAccount("1");
+		promo.deposit(12122025, 100);
+		assertEquals(101, promo.getBalance());
 	}
 }

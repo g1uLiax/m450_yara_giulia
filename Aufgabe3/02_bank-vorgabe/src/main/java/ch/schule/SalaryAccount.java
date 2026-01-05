@@ -40,8 +40,7 @@ public class SalaryAccount extends Account
 	 * bei negativem Betrag, oder nicht gen�gend
 	 * Saldo) <code>false</code>.
 	 */
-	public boolean withdraw(int date, long amount)
-	{
+	public boolean withdraw(int date, long amount) {
 		long finalBalance = getBalance() - amount;
 
 	    if (finalBalance < creditLimit)
