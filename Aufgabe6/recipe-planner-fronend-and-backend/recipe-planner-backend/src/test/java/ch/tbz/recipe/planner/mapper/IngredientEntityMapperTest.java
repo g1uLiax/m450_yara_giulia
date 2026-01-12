@@ -61,9 +61,14 @@ public class IngredientEntityMapperTest {
 
         List<Ingredient> ingredients =
                 mapper.entitiesToDomains(List.of(entity));
-        Ingredient ingredient = ingredients.get(0);
+
         SoftAssertions softly = new SoftAssertions();
-        softly.assertThat(ingredient).hasSize(1);
-        softly.assertThat(ingredients.getId())
+        softly.assertThat(ingredients).hasSize(1);
+
+        Ingredient ingredient = ingredients.get(0);
+        softly.assertThat(ingredient.getId()).isEqualTo(uuid);
+        softly.assertThat(ingredient.getName()).isEqualTo("Sugar");
+        softly.assertThat(ingredient.getAmount()).isEqualTo(100);
+        softly.assertAll();
     }
 }
