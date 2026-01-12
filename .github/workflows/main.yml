@@ -1,0 +1,12 @@
+name: CI build, test and reports
+
+on: 
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+
+jobs:
+  build-and-test:
+    

@@ -1,7 +1,7 @@
 package ch.tbz.recipe.planner.mapper;
 
-import ch.tbz.recipe.planner.domain.Recipe;
 import ch.tbz.recipe.planner.entities.RecipeEntity;
+import ch.tbz.recipe.planner.domain.Recipe;
 import org.mapstruct.Mapper;
 
 @Mapper(config = CommonMapperConfig.class)
