@@ -2,6 +2,7 @@ package ch.tbz.m450.testing.tools.controller;
 
 import ch.tbz.m450.testing.tools.repository.StudentRepository;
 import ch.tbz.m450.testing.tools.repository.entities.Student;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,8 +23,7 @@ public class StudentController {
     }
 
     @PostMapping("/students")
-    void addStudent(@RequestBody Student user) {
-        studentRepository.save(user);
+    public Student addStudent(@RequestBody Student student) {
+        return studentRepository.save(student);
     }
-
 }

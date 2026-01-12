@@ -1,4 +1,4 @@
-describe('Add Student', () => {
+describe('Create Student', () => {
 
   it('should create a new student and redirect to list', () => {
 
