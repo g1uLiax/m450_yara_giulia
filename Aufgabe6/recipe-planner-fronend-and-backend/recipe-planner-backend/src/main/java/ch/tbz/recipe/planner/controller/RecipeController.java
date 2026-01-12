@@ -38,7 +38,7 @@ public class RecipeController {
 
     @PostMapping(value = "/api/recipes")
     public ResponseEntity<Recipe> addRecipe(@RequestBody Recipe recipe) {
-        return new ResponseEntity<>(service.addRecipe(recipe), HttpStatus.OK);
+        return new ResponseEntity<>(service.addRecipe(recipe), HttpStatus.CREATED);
     }
 
 }
