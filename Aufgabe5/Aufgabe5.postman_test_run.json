@@ -1,0 +1,1086 @@
+{
+	"id": "d77281f5-37e7-4fd3-90d7-2e5428142d5b",
+	"name": "Aufgabe5",
+	"timestamp": "2026-01-12T09:54:23.862Z",
+	"collection_id": "51243019-79b327e4-4611-4eac-8e9e-5b9612ced2f4",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 400,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2026-01-12T09:54:06.335Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "e6a6685e-a0af-49e7-996f-d8ae8dbdc717",
+			"name": "GetAllStudents",
+			"url": "http://localhost:8081/students",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is JSON array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 100,
+					"fail": 0
+				},
+				"Response is JSON array": {
+					"pass": 100,
+					"fail": 0
+				}
+			},
+			"times": [
+				5,
+				5,
+				4,
+				4,
+				5,
+				4,
+				7,
+				7,
+				12,
+				8,
+				5,
+				5,
+				5,
+				5,
+				4,
+				4,
+				4,
+				8,
+				10,
+				9,
+				8,
+				6,
+				5,
+				5,
+				5,
+				5,
+				4,
+				6,
+				4,
+				5,
+				13,
+				4,
+				5,
+				8,
+				8,
+				4,
+				4,
+				8,
+				6,
+				11,
+				12,
+				13,
+				9,
+				4,
+				6,
+				5,
+				6,
+				7,
+				4,
+				5,
+				5,
+				6,
+				5,
+				6,
+				4,
+				6,
+				5,
+				8,
+				5,
+				7,
+				5,
+				26,
+				7,
+				7,
+				4,
+				5,
+				4,
+				4,
+				6,
+				10,
+				5,
+				6,
+				4,
+				4,
+				4,
+				4,
+				3,
+				7,
+				7,
+				4,
+				4,
+				4,
+				4,
+				4,
+				5,
+				4,
+				7,
+				4,
+				4,
+				4,
+				6,
+				4,
+				6,
+				4,
+				5,
+				4,
+				7,
+				3,
+				4,
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is JSON array": true
+				}
+			]
+		},
+		{
+			"id": "b8c93dcb-8695-492e-b1e4-b3600bb800ac",
+			"name": "CreateStudent",
+			"url": "http://localhost:8081/students",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 or 201": true,
+				"Response is valid JSON": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 or 201": {
+					"pass": 100,
+					"fail": 0
+				},
+				"Response is valid JSON": {
+					"pass": 100,
+					"fail": 0
+				}
+			},
+			"times": [
+				4,
+				5,
+				4,
+				4,
+				6,
+				6,
+				7,
+				5,
+				6,
+				8,
+				7,
+				6,
+				4,
+				9,
+				12,
+				5,
+				4,
+				5,
+				8,
+				7,
+				10,
+				6,
+				5,
+				5,
+				4,
+				8,
+				3,
+				6,
+				8,
+				5,
+				8,
+				4,
+				6,
+				7,
+				5,
+				9,
+				6,
+				3,
+				7,
+				5,
+				5,
+				5,
+				5,
+				6,
+				6,
+				3,
+				3,
+				4,
+				4,
+				3,
+				5,
+				8,
+				4,
+				4,
+				5,
+				6,
+				3,
+				9,
+				4,
+				6,
+				6,
+				6,
+				4,
+				5,
+				5,
+				5,
+				5,
+				3,
+				3,
+				3,
+				5,
+				4,
+				6,
+				4,
+				4,
+				3,
+				7,
+				4,
+				7,
+				4,
+				5,
+				4,
+				3,
+				6,
+				6,
+				3,
+				4,
+				5,
+				4,
+				4,
+				3,
+				5,
+				4,
+				7,
+				3,
+				5,
+				4,
+				5,
+				4,
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				},
+				{
+					"Status code is 200 or 201": true,
+					"Response is valid JSON": true
+				}
+			]
+		}
+	],
+	"count": 100,
+	"totalTime": 1112,
+	"collection": {
+		"requests": [
+			{
+				"id": "e6a6685e-a0af-49e7-996f-d8ae8dbdc717",
+				"method": "GET"
+			},
+			{
+				"id": "b8c93dcb-8695-492e-b1e4-b3600bb800ac",
+				"method": "POST"
+			}
+		]
+	}
+}
