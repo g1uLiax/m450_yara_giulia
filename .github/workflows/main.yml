@@ -19,11 +19,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Java 20 (Temurin)
+      - name: Set up Java 17 (azul)
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
-          java-version: '20'
+          distribution: 'azul'
+          java-version: '17'
           cache: 'maven'
 
       - name: Cache Maven local repository
@@ -81,5 +81,6 @@ jobs:
       - name: Publish JaCoCo site to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.SECRET_TOKEN }}
+
           publish_dir: coverage-site
