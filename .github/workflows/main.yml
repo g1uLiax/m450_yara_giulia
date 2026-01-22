@@ -10,58 +10,49 @@ permissions:
   contents: write
   checks: write
   pull-requests: write
+  pages: write
+  id-token: write
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Java 17 (azul)
-        uses: actions/setup-java@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-java@v5
         with:
-          distribution: 'azul'
+          distribution: 'zulu'
           java-version: '17'
-          cache: 'maven'
 
-      - name: Cache Maven local repository
-        uses: actions/cache@v4
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-m2-
+      - name: List repository files test
+        run: ls -R Aufgabe6
 
       - name: Build & run tests (Maven)
-        working-directory: "CiCd Pipelines/recipe-planner-fronend-and-backend/recipe-planner-backend"
+        working-directory: Aufgabe6/recipe-planner-frontend-and-backend/recipe-planner-backend
         run: mvn -B clean verify
 
       - name: Publish JUnit test report to GitHub Checks
         uses: dorny/test-reporter@v1
         if: always()
         with:
-          name: "JUnit Tests"
-          path: "CiCd Pipelines/recipe-planner-fronend-and-backend/recipe-planner-backend/target/surefire-reports/*.xml"
+          name: JUnit Tests
+          path: Aufgabe6/recipe-planner-fronend-and-backend/recipe-planner-backend/target/surefire-reports
           reporter: java-junit
           fail-on-error: false
-          list-tests: all
-          list-suites: all
 
       - name: Upload Surefire Reports (artifact)
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: surefire-reports
-          path: "CiCd Pipelines/recipe-planner-fronend-and-backend/recipe-planner-backend/target/surefire-reports/"
+          path: Aufgabe6/recipe-planner-frontend-and-backend/recipe-planner-backend/target/surefire-reports/*.xml
 
       - name: Upload JaCoCo HTML report (artifact)
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: jacoco-report
-          path: "CiCd Pipelines/recipe-planner-fronend-and-backend/recipe-planner-backend/target/site/jacoco/"
+          path: Aufgabe6/recipe-planner-frontend-and-backend/recipe-planner-backend/target/site/jacoco
 
   publish-coverage:
     needs: build-and-test
@@ -69,8 +60,8 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v6
 
       - name: Download JaCoCo artifact
         uses: actions/download-artifact@v4
@@ -82,5 +73,13 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.SECRET_TOKEN }}
-
           publish_dir: coverage-site
+          publish_branch: gh-pages
+
+
+
+
+
+
+
+
