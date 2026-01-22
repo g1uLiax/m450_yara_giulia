@@ -24,6 +24,9 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
 
+      - name: List repository files test
+        run: ls -R Aufgabe6
+
       - name: Build & run tests (Maven)
         working-directory: Aufgabe6/recipe-planner-frontend-and-backend/recipe-planner-backend
         run: mvn -B clean verify
@@ -72,6 +75,7 @@ jobs:
           github_token: ${{ secrets.SECRET_TOKEN }}
           publish_dir: coverage-site
           publish_branch: gh-pages
+
 
 
 
