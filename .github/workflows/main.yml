@@ -10,6 +10,8 @@ permissions:
   contents: write
   checks: write
   pull-requests: write
+  pages: write
+  id-token: write
 
 jobs:
   build-and-test:
@@ -19,49 +21,39 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Java 17 (azul)
+      - name: Set up Java 17 (Azul Zulu)
         uses: actions/setup-java@v4
         with:
-          distribution: 'azul'
+          distribution: azul
           java-version: '17'
-          cache: 'maven'
-
-      - name: Cache Maven local repository
-        uses: actions/cache@v4
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-m2-
+          cache: maven
 
       - name: Build & run tests (Maven)
-        working-directory: "CiCd Pipelines/recipe-planner-fronend-and-backend/recipe-planner-backend"
+        working-directory: CiCd Pipelines/recipe-planner-frontend-and-backend/recipe-planner-backend
         run: mvn -B clean verify
 
       - name: Publish JUnit test report to GitHub Checks
         uses: dorny/test-reporter@v1
         if: always()
         with:
-          name: "JUnit Tests"
-          path: "CiCd Pipelines/recipe-planner-fronend-and-backend/recipe-planner-backend/target/surefire-reports/*.xml"
+          name: JUnit Tests
+          path: CiCd Pipelines/recipe-planner-frontend-and-backend/recipe-planner-backend/target/surefire-reports/*.xml
           reporter: java-junit
           fail-on-error: false
-          list-tests: all
-          list-suites: all
 
       - name: Upload Surefire Reports (artifact)
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: surefire-reports
-          path: "CiCd Pipelines/recipe-planner-fronend-and-backend/recipe-planner-backend/target/surefire-reports/"
+          path: CiCd Pipelines/recipe-planner-frontend-and-backend/recipe-planner-backend/target/surefire-reports
 
       - name: Upload JaCoCo HTML report (artifact)
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: jacoco-report
-          path: "CiCd Pipelines/recipe-planner-fronend-and-backend/recipe-planner-backend/target/site/jacoco/"
+          path: CiCd Pipelines/recipe-planner-frontend-and-backend/recipe-planner-backend/target/site/jacoco
 
   publish-coverage:
     needs: build-and-test
@@ -69,7 +61,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Download JaCoCo artifact
@@ -82,5 +74,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.SECRET_TOKEN }}
-
           publish_dir: coverage-site
+          publish_branch: gh-pages
