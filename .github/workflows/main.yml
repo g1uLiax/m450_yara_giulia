@@ -1,12 +1,85 @@
-name: CI build, test and reports
+name: CI - Build Test and Reports
 
-on: 
+on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
 
+permissions:
+  contents: write
+  checks: write
+  pull-requests: write
 
 jobs:
   build-and-test:
-    
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java 20 (Temurin)
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '20'
+          cache: 'maven'
+
+      - name: Cache Maven local repository
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-m2-
+
+      - name: Build & run tests (Maven)
+        working-directory: "CiCd Pipelines/recipe-planner-fronend-and-backend/recipe-planner-backend"
+        run: mvn -B clean verify
+
+      - name: Publish JUnit test report to GitHub Checks
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: "JUnit Tests"
+          path: "CiCd Pipelines/recipe-planner-fronend-and-backend/recipe-planner-backend/target/surefire-reports/*.xml"
+          reporter: java-junit
+          fail-on-error: false
+          list-tests: all
+          list-suites: all
+
+      - name: Upload Surefire Reports (artifact)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: surefire-reports
+          path: "CiCd Pipelines/recipe-planner-fronend-and-backend/recipe-planner-backend/target/surefire-reports/"
+
+      - name: Upload JaCoCo HTML report (artifact)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jacoco-report
+          path: "CiCd Pipelines/recipe-planner-fronend-and-backend/recipe-planner-backend/target/site/jacoco/"
+
+  publish-coverage:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download JaCoCo artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: jacoco-report
+          path: coverage-site
+
+      - name: Publish JaCoCo site to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: coverage-site
