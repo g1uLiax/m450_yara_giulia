@@ -18,15 +18,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
       - name: Set up Java 17 (Azul Zulu)
-        uses: actions/setup-java@v4
+        uses: actions/checkout@v6
+        uses: actions/setup-java@v5
         with:
-          distribution: azul
+          distribution: 'zulu'
           java-version: '17'
-          cache: maven
+      - run: java HelloWorldApp.java
 
       - name: Build & run tests (Maven)
         working-directory: CiCd Pipelines/recipe-planner-frontend-and-backend/recipe-planner-backend
@@ -76,3 +74,4 @@ jobs:
           github_token: ${{ secrets.SECRET_TOKEN }}
           publish_dir: coverage-site
           publish_branch: gh-pages
+
