@@ -58,7 +58,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Download JaCoCo artifact
         uses: actions/download-artifact@v4
@@ -72,6 +72,7 @@ jobs:
           github_token: ${{ secrets.SECRET_TOKEN }}
           publish_dir: coverage-site
           publish_branch: gh-pages
+
 
 
 
