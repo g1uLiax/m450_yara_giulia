@@ -36,7 +36,7 @@ jobs:
         if: always()
         with:
           name: JUnit Tests
-          path: Aufgabe6/recipe-planner-fronend-and-backend/recipe-planner-backend/target/surefire-reports
+          path: Aufgabe6/recipe-planner-frontend-and-backend/recipe-planner-backend/target/surefire-reports
           reporter: java-junit
           fail-on-error: false
 
@@ -75,6 +75,7 @@ jobs:
           github_token: ${{ secrets.SECRET_TOKEN }}
           publish_dir: coverage-site
           publish_branch: gh-pages
+
 
 
 
