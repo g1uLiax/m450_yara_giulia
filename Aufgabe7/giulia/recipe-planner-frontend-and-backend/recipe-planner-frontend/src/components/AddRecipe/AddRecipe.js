@@ -62,6 +62,20 @@ function AddRecipe() {
         removeIngredient={removeIngredient}
     />)
 
+    const addRecipe = async () => {
+        try {
+            const response = await axios.post("http://localhost:8080/api/recipes", formData);
+            console.log("Recipe added successfully:", response.data);
+        } catch (error) {
+            console.error("Error adding recipe:", error);
+        }
+    }
+
+    const handleInputChange = (e) => {
+        const { id, value } = e.target;
+        setFormData({ ...formData, [id]: value });
+    }
+
     return (
         <>
             <div className="bg">
@@ -96,7 +110,7 @@ function AddRecipe() {
                             className="mt-1"
                             >Add Ingredient</Button>
                     </Row>
-                    <Button variant="primary"  type="submit" className="mb-5">
+                    <Button variant="primary" onClick={addRecipe} className="mb-5">
                         Submit
                     </Button>
                 </div>
