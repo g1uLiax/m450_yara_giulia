@@ -62,35 +62,20 @@ function AddRecipe() {
         removeIngredient={removeIngredient}
     />)
 
-    const addRecipe = async () => {
-        try {
-            const response = await axios.post("http://localhost:8080/api/recipes", formData);
-            console.log("Recipe added successfully:", response.data);
-            // Optionally redirect or show success message
-        } catch (error) {
-            console.error("Error adding recipe:", error);
-        }
-    }
-
-    const handleInputChange = (e) => {
-        const { id, value } = e.target;
-        setFormData({ ...formData, [id]: value });
-    }
-
     return (
         <>
             <div className="bg">
                 <div className="m-3">
                     <h1 className="h3 bg-dark text-bg-primary mt-2">Add Recipe</h1>
-                    <Form.Group className="mb-1" controlId="name">
+                    <Form.Group className="mb-1" controlId="formBasicName">
                         <Form.Label>Recipe Name:</Form.Label>
-                        <Form.Control placeholder="Name" value={formData.name} onChange={handleInputChange}/>
-                    </Form.Group><Form.Group className="mb-1" controlId="description">
+                        <Form.Control placeholder="Name"/>
+                    </Form.Group><Form.Group className="mb-1" controlId="formBasicDescription">
                         <Form.Label>Description:</Form.Label>
-                        <Form.Control placeholder="Description" value={formData.description} onChange={handleInputChange}/>
-                    </Form.Group><Form.Group className="mb-1 mb-5" controlId="imageUrl">
+                        <Form.Control placeholder="Description"/>
+                    </Form.Group><Form.Group className="mb-1 mb-5" controlId="formBasicImageUrl">
                         <Form.Label>Image URL:</Form.Label>
-                        <Form.Control placeholder="URL" value={formData.imageUrl} onChange={handleInputChange}/>
+                        <Form.Control placeholder="URL"/>
                     </Form.Group>
                     <Row>
                         <Col>Ingredient</Col>
@@ -111,7 +96,7 @@ function AddRecipe() {
                             className="mt-1"
                             >Add Ingredient</Button>
                     </Row>
-                    <Button variant="primary" onClick={addRecipe} className="mb-5">
+                    <Button variant="primary"  type="submit" className="mb-5">
                         Submit
                     </Button>
                 </div>
