@@ -9,12 +9,18 @@ const AddIngredient = ({ingredients, ingredient, updateIngredient, removeIngredi
         <Row>
             <Col>
                 <Form.Group className="mb-1" controlId="formBasicName">
-                    <Form.Control placeholder="Name"/>
+                    <Form.Control 
+                        value={ingredient.ingredient}
+                        onChange={(e) => updateIngredient({...ingredient, ingredient: e.target.value})}
+                        placeholder="Name"/>
                 </Form.Group>
             </Col>
             <Col>
                 <Form.Group className="mb-1" controlId="formBasicUnit">
-                    <Form.Select>
+                    <Form.Select 
+                        value={ingredient.unit}
+                        onChange={(e) => updateIngredient({...ingredient, unit: e.target.value})}
+                    >
                         <option>PIECE</option>
                         <option>GRAMM</option>
                         <option>KILOGRAMM</option>
@@ -25,7 +31,10 @@ const AddIngredient = ({ingredients, ingredient, updateIngredient, removeIngredi
             </Col>
             <Col>
                 <Form.Group className="mb-1" controlId="quantity">
-                    <Form.Control placeholder="Quantity"/>
+                    <Form.Control 
+                        value={ingredient.quantity}
+                        onChange={(e) => updateIngredient({...ingredient, quantity: e.target.value})}
+                        placeholder="Quantity"/>
                 </Form.Group>
             </Col>
             <Col xs={1}>
