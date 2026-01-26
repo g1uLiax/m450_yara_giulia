@@ -62,6 +62,18 @@ function AddRecipe() {
         removeIngredient={removeIngredient}
     />)
 
+    const addRecipe = async () => {
+        try {
+            const response = await axios.post("http://localhost:8080/api/recipes", formData);
+            console.log("Recipe added successfully:", response.data);
+        } catch (error) {
+            console.error("Error adding recipe:", error);
+        }
+    }
+
+    const handleInputChange = (e) => {
+        const { id, value } = e.target;
+        setFormData({ ...formData, [id]: value });
     const addRecipe = () => {
         axios.post("http://localhost:8080/api/recipes", formData).then((response) => {
             console.log(response);
