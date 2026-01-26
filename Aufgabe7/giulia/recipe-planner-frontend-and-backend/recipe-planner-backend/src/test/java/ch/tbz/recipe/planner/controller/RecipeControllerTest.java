@@ -98,4 +98,28 @@ class RecipeControllerTest {
                 .andExpect(jsonPath("$.imageUrl").value("img"))
                 .andExpect(jsonPath("$.ingredients").isArray());
     }
+
+    @Test
+    void shouldUpdateRecipe() throws Exception {
+        UUID id = UUID.randomUUID();
+        Recipe update = new Recipe(
+                id,
+                "Updated",
+                "Desc",
+                "img",
+                List.of()
+        );
+
+        Mockito.when(service.updateRecipe(Mockito.any())).thenReturn(update);
+
+        mockMvc.perform(put("/api/recipes")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(update)))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id").value(id.toString()))
+                .andExpect(jsonPath("$.name").value("Updated"))
+                .andExpect(jsonPath("$.description").value("Desc"))
+                .andExpect(jsonPath("$.imageUrl").value("img"))
+                .andExpect(jsonPath("$.ingredients").isArray());
+    }
 }
