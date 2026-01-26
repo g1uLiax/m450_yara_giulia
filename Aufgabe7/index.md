@@ -21,3 +21,13 @@ I wish there were more comments to help understand the changes made to the files
 ![img_1.png](img_1.png)
 
 ## Aufgabe 2
+
+## Giulia's PR
+
+![img_2.png](img_2.png)
+
+
+## Yara's PR 
+
+
+![img_3.png](img_3.png)
