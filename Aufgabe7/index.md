@@ -33,3 +33,5 @@ This feature had to have more changes then the feature before in which I think t
 ## Yara's PR 
 
 ![img_3.png](img_3.png)
+
+Yara added all the neccessary methods for the feature to update the implementation. The code was written according to the styleguide, even though we didnt really have a style guide it matches the structure of the other ocode pretty good. 
