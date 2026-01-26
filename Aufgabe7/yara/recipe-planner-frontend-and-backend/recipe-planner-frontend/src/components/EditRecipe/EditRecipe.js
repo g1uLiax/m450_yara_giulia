@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import './AddRecipe.css'; // Reusing AddRecipe styles
+import '../AddRecipe/AddRecipe.css'; // Reusing AddRecipe styles
 import {Form, Button, Col, Row} from 'react-bootstrap';
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
