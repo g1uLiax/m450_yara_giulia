@@ -5,16 +5,30 @@ import {Button, Col, Form, Row} from "react-bootstrap";
 
 const AddIngredient = ({ingredients, ingredient, updateIngredient, removeIngredient}) => {
 
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        updateIngredient({ ...ingredient, [name]: value });
+    };
+
     return (
         <Row>
             <Col>
-                <Form.Group className="mb-1" controlId="formBasicName">
-                    <Form.Control placeholder="Name"/>
+                <Form.Group className="mb-1" controlId={`formBasicName-${ingredient.listId}`}>
+                    <Form.Control 
+                        name="name" 
+                        value={ingredient.name || ''} 
+                        onChange={handleChange} 
+                        placeholder="Name"
+                    />
                 </Form.Group>
             </Col>
             <Col>
-                <Form.Group className="mb-1" controlId="formBasicUnit">
-                    <Form.Select>
+                <Form.Group className="mb-1" controlId={`formBasicUnit-${ingredient.listId}`}>
+                    <Form.Select 
+                        name="unit" 
+                        value={ingredient.unit || 'PIECE'} 
+                        onChange={handleChange}
+                    >
                         <option>PIECE</option>
                         <option>GRAMM</option>
                         <option>KILOGRAMM</option>
@@ -24,8 +38,13 @@ const AddIngredient = ({ingredients, ingredient, updateIngredient, removeIngredi
                 </Form.Group>
             </Col>
             <Col>
-                <Form.Group className="mb-1" controlId="quantity">
-                    <Form.Control placeholder="Quantity"/>
+                <Form.Group className="mb-1" controlId={`quantity-${ingredient.listId}`}>
+                    <Form.Control 
+                        name="amount" 
+                        value={ingredient.amount || ''} 
+                        onChange={handleChange} 
+                        placeholder="Quantity"
+                    />
                 </Form.Group>
             </Col>
             <Col xs={1}>
