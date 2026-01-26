@@ -74,6 +74,11 @@ function AddRecipe() {
     const handleInputChange = (e) => {
         const { id, value } = e.target;
         setFormData({ ...formData, [id]: value });
+    const addRecipe = () => {
+        axios.post("http://localhost:8080/api/recipes", formData).then((response) => {
+            console.log(response);
+            window.location.href = "/";
+        });
     }
 
     return (
@@ -83,13 +88,22 @@ function AddRecipe() {
                     <h1 className="h3 bg-dark text-bg-primary mt-2">Add Recipe</h1>
                     <Form.Group className="mb-1" controlId="formBasicName">
                         <Form.Label>Recipe Name:</Form.Label>
-                        <Form.Control placeholder="Name"/>
+                        <Form.Control 
+                            value={formData.name}
+                            onChange={(e) => setFormData({...formData, name: e.target.value})}
+                            placeholder="Name"/>
                     </Form.Group><Form.Group className="mb-1" controlId="formBasicDescription">
                         <Form.Label>Description:</Form.Label>
-                        <Form.Control placeholder="Description"/>
+                        <Form.Control 
+                            value={formData.description}
+                            onChange={(e) => setFormData({...formData, description: e.target.value})}
+                            placeholder="Description"/>
                     </Form.Group><Form.Group className="mb-1 mb-5" controlId="formBasicImageUrl">
                         <Form.Label>Image URL:</Form.Label>
-                        <Form.Control placeholder="URL"/>
+                        <Form.Control 
+                            value={formData.imageUrl}
+                            onChange={(e) => setFormData({...formData, imageUrl: e.target.value})}
+                            placeholder="URL"/>
                     </Form.Group>
                     <Row>
                         <Col>Ingredient</Col>

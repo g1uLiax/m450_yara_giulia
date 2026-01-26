@@ -41,5 +41,10 @@ public class RecipeController {
 <span class="fc" id="L41">        return new ResponseEntity&lt;&gt;(service.addRecipe(recipe), HttpStatus.CREATED);</span>
     }
 
+    @PutMapping(value = &quot;/api/recipes&quot;)
+    public ResponseEntity&lt;Recipe&gt; updateRecipe(@RequestBody Recipe recipe) {
+<span class="fc" id="L46">        return new ResponseEntity&lt;&gt;(service.updateRecipe(recipe), HttpStatus.OK);</span>
+    }
+
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
